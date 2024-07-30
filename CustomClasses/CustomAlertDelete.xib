@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Inter-Bold.ttf">
+            <string>Inter-Bold</string>
+        </array>
+        <array key="Inter-Regular.ttf">
+            <string>Inter-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomAlertDelete" customModule="synex" customModuleProvider="target">
+            <connections>
+                <outlet property="cancelButton" destination="YQ9-1d-IVC" id="Nhq-TC-KOl"/>
+                <outlet property="doneButton" destination="dZE-op-nHD" id="t2t-QY-6cw"/>
+                <outlet property="message" destination="0T9-9Z-qBy" id="DRz-dV-I9V"/>
+                <outlet property="title" destination="m7d-vb-Bp2" id="Teq-0z-hE9"/>
+                <outlet property="view" destination="iN0-l3-epB" id="8rw-nK-wuM"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vuj-th-7GG" userLabel="mainView">
+                    <rect key="frame" x="24" y="345.5" width="366" height="219.5"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you sure you want to delete your account?" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m7d-vb-Bp2">
+                            <rect key="frame" x="20" y="20" width="252" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="22" id="6Ht-Ta-OLN"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="18"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="iS6-DC-6k6">
+                            <rect key="frame" x="198" y="172.5" width="148" height="24"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YQ9-1d-IVC">
+                                    <rect key="frame" x="0.0" y="0.0" width="64" height="24"/>
+                                    <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="16"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="Cancel">
+                                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                            <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                            <real key="value" value="0.0"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="0.0"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="noButtonAction:" destination="-1" eventType="touchUpInside" id="vbD-E4-aTA"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dZE-op-nHD">
+                                    <rect key="frame" x="84" y="0.0" width="64" height="24"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="16"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="Confirm">
+                                        <color key="titleColor" name="orange"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="0.0"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="okButtonAction:" destination="-1" eventType="touchUpInside" id="5K4-Cd-b8g"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="24" id="3QZ-rQ-vlu"/>
+                            </constraints>
+                        </stackView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="The information saved in Kaily will not be remained and all history will be deleted." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0T9-9Z-qBy">
+                            <rect key="frame" x="20" y="80" width="306" height="58.5"/>
+                            <constraints>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="22" id="O6d-zc-gCn"/>
+                                <constraint firstAttribute="width" constant="306" id="nHH-0f-axc"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="16"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="0T9-9Z-qBy" firstAttribute="top" secondItem="m7d-vb-Bp2" secondAttribute="bottom" constant="16" id="8Q8-Un-sSH"/>
+                        <constraint firstItem="0T9-9Z-qBy" firstAttribute="leading" secondItem="Vuj-th-7GG" secondAttribute="leading" constant="20" id="Gm0-qT-huy"/>
+                        <constraint firstAttribute="trailing" secondItem="iS6-DC-6k6" secondAttribute="trailing" constant="20" id="IhU-Ec-jQF"/>
+                        <constraint firstItem="YQ9-1d-IVC" firstAttribute="top" secondItem="0T9-9Z-qBy" secondAttribute="bottom" constant="34" id="KkS-Re-ViP"/>
+                        <constraint firstItem="m7d-vb-Bp2" firstAttribute="top" secondItem="Vuj-th-7GG" secondAttribute="top" constant="20" id="Xy0-Nu-wav"/>
+                        <constraint firstItem="m7d-vb-Bp2" firstAttribute="leading" secondItem="Vuj-th-7GG" secondAttribute="leading" constant="20" id="fIk-J8-K7Z"/>
+                        <constraint firstAttribute="bottom" secondItem="iS6-DC-6k6" secondAttribute="bottom" constant="23" id="gDP-J0-suQ"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="159" id="mM0-RG-swa"/>
+                        <constraint firstAttribute="trailing" secondItem="m7d-vb-Bp2" secondAttribute="trailing" constant="94" id="rX4-1H-UJc"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="20"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.75" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Vuj-th-7GG" secondAttribute="trailing" constant="24" id="8zs-Ok-eWw"/>
+                <constraint firstItem="Vuj-th-7GG" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="24" id="Lnf-yL-9oX"/>
+                <constraint firstItem="Vuj-th-7GG" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="aB5-Dx-kz4"/>
+            </constraints>
+            <point key="canvasLocation" x="47.826086956521742" y="-32.142857142857139"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="orange">
+            <color red="1" green="0.37647058823529411" blue="0.10196078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
